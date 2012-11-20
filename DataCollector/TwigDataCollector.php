@@ -97,7 +97,7 @@ class TwigDataCollector extends DataCollector
                 array( "type" =>  in_array(gettype($value), array('object', 'resource'))
                                     ? get_class($value)
                                     : gettype($value),
-                        "value" => json_encode($value));
+                        "value" => '');
         }
 
         $this->data['templates'][] = array(
