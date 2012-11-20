@@ -23,9 +23,9 @@
         <tr>
             <th>{{ template.name }}</th>
             <td>
-                {% for parameter, type in template.parameters %}
+                {% for parameter, info in template.parameters %}
                 <code>
-                    {{ parameter }}: {{ type }}
+                    {{ parameter }}: {{ info['type'] }}
                 </code>
                 {% if not loop.last %}<br />{% endif %}
                 {% endfor %}
